@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        GsonManager.init(this);
+
         DisplayMetrics metrics = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(metrics);
         height = (int)(metrics.heightPixels * 0.66);
@@ -71,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
         main_BTN_next.setOnClickListener(view -> {
             refreshUI();
         });
-
 
     }
     private void findViews() {
